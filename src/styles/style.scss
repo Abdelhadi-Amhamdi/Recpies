@@ -1,0 +1,402 @@
+// variables
+
+$primary: lightcoral;
+$secondary: khaki;
+$danger: lightblue;
+$info: white;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+// fonts
+@font-face {
+  font-family: 'Poppi';
+  src: url() 
+}
+
+body {
+  // background-color: $secondary;
+  background : linear-gradient($primary , $secondary) !important;
+  height: 105vh;
+  
+}
+
+.main {
+  width: 95%;
+  height: 90vh;
+  margin: 30px;
+  background-color: rgba($info, $alpha: .5);
+  box-shadow: rgba($color: #000000, $alpha: .2) 0px 2px 6px;
+  #content {
+    height: 90vh;
+    padding: 40;
+    .form-group {
+      margin-top: 20px;
+      display: flex !important;
+      width: 50%;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      input {
+        background-color: transparent;
+        border: none;
+        border-radius: 0px;
+        border-bottom: 1px solid $primary;
+      }      
+      input:focus {
+        box-shadow: none;
+      }
+      .btn {
+        background-color: $primary;
+        border-radius: 50%;
+        color: $info;
+        margin-left: 10px;
+        box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
+      }
+    }
+    
+    .page1{
+      transition: 2s all ease-in;
+    }
+    .slide {
+      height: 250px;
+      padding: 10px;
+      .img {
+        img {
+          margin-top: 20px;
+          margin-left: 20px;
+          width: 300px;
+          height: 200px;
+          box-shadow: rgba($color: #000000, $alpha: .5) 0px 4px 6px;
+        }
+      }
+      .text {
+        margin-top: 30px;
+        h1 {
+          font-family: "Operator mono";
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+          font-style: italic;
+          span {
+            color: $primary;
+          }
+        }
+        h2 {
+          font-family: "Operator mono";
+          font-size: 1.7rem;
+          font-weight: bold;
+          margin-bottom: 20px;
+          font-style: italic;
+        }
+        p {
+          font-family: "Josefin sans";
+          line-height: 2;
+        }
+      }
+    }
+    .services {
+      width: 60%;
+      margin-left: -2px;
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-around;
+    .flip-card{
+      perspective: 1000px;
+      height: 100px !important;
+      .card-front {
+        .st0 {
+          fill: $secondary;
+        }
+        .st1 {
+          fill:#3f3d56;
+        }
+        .st2 {
+          opacity: 0.1;
+          enable-background: new;
+        }
+        .st3 {
+          fill: $primary;
+        }
+        .st4 {
+          fill: #fbbebe;
+        }
+        .st5 {
+          fill: #2f2e41;
+        }
+        .st6 {
+          fill: #575a89;
+        }
+        .st7{fill:#B07473;}
+        .st8{fill:$primary;}
+        .st9{fill:#65617D;}
+        .st10{fill:#444053;}
+        .st11{fill:#DDE1EB;}
+        .st12{fill:#585268;}
+        .st13{opacity:0.1;}
+        .st14{fill:#535461;}
+        .st15{fill:$primary;}
+        .st16{opacity:0.1;fill:#FFFFFF;enable-background:new    ;}
+        .st17{fill:#C8CBD8;}
+        .st18{fill:#E8EAF1;}
+        .st24{fill:url(#SVGID_2_);}
+        .st25{fill:$primary;}
+        .st26{fill:#714246;}
+        .st27{fill:#453034;}
+        .st28{fill:#E8E8F0;}
+        .st29{fill:url(#SVGID_3_);}
+        .st30{fill:$primary;}
+        .st31{fill:#E1E7EF;}
+        .st32{fill:$primary;}
+        .st33{opacity:3.000000e-02;enable-background:new    ;}
+        .st34{fill:#FFD037;}
+        .st35{opacity:0.2;enable-background:new    ;}
+        width: 150px;
+        padding: 10px;
+        text-align: center;
+        background-color: rgba($info, $alpha: .4);
+        box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+        position: relative;
+        height: 170px;
+        .food , .drink , .icecream{
+          margin-left: 50%;
+          transform: translateX(-50%);
+          height: 100px ;
+          width: 100px;
+        }
+        .icecream{
+          width: 120px !important;
+          margin-left: 80px;
+        }
+        .food{
+          width: 128px !important;
+        }
+        h1 {
+          margin-top: 25px;
+          font-size: 1.3rem;
+          font-family: "Josefin sans";
+        }
+      }
+      .card-back{
+        visibility: hidden;
+        
+      }
+    }
+    .flip-card:hover .card-front{
+      transform: rotateY(180deg);
+      .icecream , h1{ visibility: hidden; transition:all .3s ease-in;}
+      .food , h1{ visibility: hidden; transition:all .3s ease-in;}
+      .drink , h1{ visibility: hidden; transition:all .3s ease-in;}
+      
+    }
+    .flip-card:hover .card-back{
+      visibility: visible;
+      position: absolute;
+      top: 60%;
+      left: 35%;
+      transition:all .3s ease-in;
+      transform: translateZ(-60% -35%);
+      font-weight: bolder;
+      .icon{
+        background-color: $primary;
+        color: $info;
+        padding: 5px;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        border-radius: 50%;
+      }
+    }
+    
+      
+    }
+    .recipes{
+      padding: 20px;
+      margin-right: 60px;
+      scroll-behavior: smooth;
+      overflow-y: scroll;
+      height: 70vh;
+      .card{
+        width: 100%;
+        height: 200px;
+        background-color: rgba($info, $alpha: .4);
+        margin: 10px 0px;
+        box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
+        border-radius: 0px;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100px;
+        }
+        h1{
+          font-size: 1rem;
+          text-align: center;
+          font-family: "Josefin sans";
+          font-style: italic;
+          margin-top: 20px;
+        }
+        .buttons{
+          display: none;
+          padding: 10px;
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          transform: translateY(-50%);
+          .btn{
+            background-color: $primary;
+            color:$info;
+            height: 35px;
+            width: 35px;
+            margin-left: 80%;
+            font-size: .9rem;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
+          }
+          .btn:hover:before{
+            opacity: 1;
+          }
+          .more:before{
+            content: attr(aria-label);
+            opacity: 0;
+            position: absolute;
+            top: 16px;
+            left: 110px;
+            width:fit-content;
+            padding:3px;
+            color: black;
+            box-shadow: rgba($color: #000000, $alpha: .2);
+            background: rgba($info, $alpha: .4);
+            pointer-events: none;
+            transition: all .5s ease-in;
+            font-family: "Josefin sans";
+            border-radius: 10px;
+          }
+          .show::before{
+            content: attr(aria-label);
+            opacity: 0;
+            position: absolute;
+            top: 60px;
+            left: 110px;
+            width:fit-content;
+            padding:3px;
+            color: black;
+            box-shadow: rgba($color: #000000, $alpha: .2);
+            background: rgba($info, $alpha: .4);
+            pointer-events: none;
+            transition: all .5s ease-in;
+            font-family: "Josefin sans";
+            border-radius: 10px;
+          }
+        }
+      }
+      .card:hover .buttons{
+        display: block;
+      }
+    }
+    #Show{
+      margin-top: 40px;
+      img{
+        width: 70%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        box-shadow: rgba($color: #000000, $alpha: .5) 0px 4px 6px;
+      }
+      h1{
+        margin-top: 20px;
+        font-family: "Operator mono";
+        font-size: 1.9rem;
+        font-style: italic;
+      }
+      .howtomake{
+        font-family: "Josefin sans";
+        margin-top: 20px;
+        line-height: 2;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+        height: 200px;
+      }
+      .btn{
+        background-color: $primary;
+        color: white;
+        font-family: "Josefin sans";
+      }
+    }
+    .btn-switch {
+      position: absolute;
+      top: 80vh;
+      right: 10px;
+      .btn {
+        background-color: $primary;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: $info;
+        box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
+      }
+      #right{
+        margin-left: 10px !important;
+      }
+    }
+  }
+  #user {
+    .fav{
+      padding: 20px;
+      border-left: 2px solid $primary;
+      width: 100%;
+      height: 100%;
+      h1{
+        font-size: 1.2rem;
+        font-family: "Operator mono";
+        font-style: italic;
+      }
+      .list-favs{
+        margin-top: 50px;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+        height: 70vh;
+      }
+      .fav-item{
+        cursor: pointer;
+        background-color: rgba($info, $alpha: .4);
+        border-radius: 20px;
+        margin: 5px;
+        padding: 5px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
+        img{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+        h4{
+          font-size: .8rem;
+          font-family: "Josefin sans";
+        }
+        .btn{
+          width: 40px;
+          height: 40px;
+          background-color: $primary;
+          border-radius: 50%;
+          color:  $info;
+        }
+      }
+    }
+  }
+}
+
+
+
+::-webkit-scrollbar{
+  display: none;
+}

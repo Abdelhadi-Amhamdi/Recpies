@@ -1,0 +1,572 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Poppi';
+  src: url();
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(lightcoral), to(khaki)) !important;
+  background: linear-gradient(lightcoral, khaki) !important;
+  height: 105vh;
+}
+
+.main {
+  width: 95%;
+  height: 90vh;
+  margin: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px;
+}
+
+.main #content {
+  height: 90vh;
+  padding: 40;
+}
+
+.main #content .form-group {
+  margin-top: 20px;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  width: 50%;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main #content .form-group input {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid lightcoral;
+}
+
+.main #content .form-group input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.main #content .form-group .btn {
+  background-color: lightcoral;
+  border-radius: 50%;
+  color: white;
+  margin-left: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+}
+
+.main #content .page1 {
+  -webkit-transition: 2s all ease-in;
+  transition: 2s all ease-in;
+}
+
+.main #content .slide {
+  height: 250px;
+  padding: 10px;
+}
+
+.main #content .slide .img img {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 200px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px;
+}
+
+.main #content .slide .text {
+  margin-top: 30px;
+}
+
+.main #content .slide .text h1 {
+  font-family: "Operator mono";
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.main #content .slide .text h1 span {
+  color: lightcoral;
+}
+
+.main #content .slide .text h2 {
+  font-family: "Operator mono";
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.main #content .slide .text p {
+  font-family: "Josefin sans";
+  line-height: 2;
+}
+
+.main #content .services {
+  width: 60%;
+  margin-left: -2px;
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main #content .services .flip-card {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  height: 100px !important;
+}
+
+.main #content .services .flip-card .card-front {
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  height: 170px;
+}
+
+.main #content .services .flip-card .card-front .st0 {
+  fill: khaki;
+}
+
+.main #content .services .flip-card .card-front .st1 {
+  fill: #3f3d56;
+}
+
+.main #content .services .flip-card .card-front .st2 {
+  opacity: 0.1;
+  enable-background: new;
+}
+
+.main #content .services .flip-card .card-front .st3 {
+  fill: lightcoral;
+}
+
+.main #content .services .flip-card .card-front .st4 {
+  fill: #fbbebe;
+}
+
+.main #content .services .flip-card .card-front .st5 {
+  fill: #2f2e41;
+}
+
+.main #content .services .flip-card .card-front .st6 {
+  fill: #575a89;
+}
+
+.main #content .services .flip-card .card-front .st7 {
+  fill: #B07473;
+}
+
+.main #content .services .flip-card .card-front .st8 {
+  fill: lightcoral;
+}
+
+.main #content .services .flip-card .card-front .st9 {
+  fill: #65617D;
+}
+
+.main #content .services .flip-card .card-front .st10 {
+  fill: #444053;
+}
+
+.main #content .services .flip-card .card-front .st11 {
+  fill: #DDE1EB;
+}
+
+.main #content .services .flip-card .card-front .st12 {
+  fill: #585268;
+}
+
+.main #content .services .flip-card .card-front .st13 {
+  opacity: 0.1;
+}
+
+.main #content .services .flip-card .card-front .st14 {
+  fill: #535461;
+}
+
+.main #content .services .flip-card .card-front .st15 {
+  fill: lightcoral;
+}
+
+.main #content .services .flip-card .card-front .st16 {
+  opacity: 0.1;
+  fill: #FFFFFF;
+  enable-background: new;
+}
+
+.main #content .services .flip-card .card-front .st17 {
+  fill: #C8CBD8;
+}
+
+.main #content .services .flip-card .card-front .st18 {
+  fill: #E8EAF1;
+}
+
+.main #content .services .flip-card .card-front .st24 {
+  fill: url(#SVGID_2_);
+}
+
+.main #content .services .flip-card .card-front .st25 {
+  fill: lightcoral;
+}
+
+.main #content .services .flip-card .card-front .st26 {
+  fill: #714246;
+}
+
+.main #content .services .flip-card .card-front .st27 {
+  fill: #453034;
+}
+
+.main #content .services .flip-card .card-front .st28 {
+  fill: #E8E8F0;
+}
+
+.main #content .services .flip-card .card-front .st29 {
+  fill: url(#SVGID_3_);
+}
+
+.main #content .services .flip-card .card-front .st30 {
+  fill: lightcoral;
+}
+
+.main #content .services .flip-card .card-front .st31 {
+  fill: #E1E7EF;
+}
+
+.main #content .services .flip-card .card-front .st32 {
+  fill: lightcoral;
+}
+
+.main #content .services .flip-card .card-front .st33 {
+  opacity: 3.000000e-02;
+  enable-background: new;
+}
+
+.main #content .services .flip-card .card-front .st34 {
+  fill: #FFD037;
+}
+
+.main #content .services .flip-card .card-front .st35 {
+  opacity: 0.2;
+  enable-background: new;
+}
+
+.main #content .services .flip-card .card-front .food, .main #content .services .flip-card .card-front .drink, .main #content .services .flip-card .card-front .icecream {
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 100px;
+  width: 100px;
+}
+
+.main #content .services .flip-card .card-front .icecream {
+  width: 120px !important;
+  margin-left: 80px;
+}
+
+.main #content .services .flip-card .card-front .food {
+  width: 128px !important;
+}
+
+.main #content .services .flip-card .card-front h1 {
+  margin-top: 25px;
+  font-size: 1.3rem;
+  font-family: "Josefin sans";
+}
+
+.main #content .services .flip-card .card-back {
+  visibility: hidden;
+}
+
+.main #content .services .flip-card:hover .card-front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.main #content .services .flip-card:hover .card-front .icecream, .main #content .services .flip-card:hover .card-front h1 {
+  visibility: hidden;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.main #content .services .flip-card:hover .card-front .food, .main #content .services .flip-card:hover .card-front h1 {
+  visibility: hidden;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.main #content .services .flip-card:hover .card-front .drink, .main #content .services .flip-card:hover .card-front h1 {
+  visibility: hidden;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.main #content .services .flip-card:hover .card-back {
+  visibility: visible;
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  -webkit-transform: translateZ(-60% -35%);
+          transform: translateZ(-60% -35%);
+  font-weight: bolder;
+}
+
+.main #content .services .flip-card:hover .card-back .icon {
+  background-color: lightcoral;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.main #content .recipes {
+  padding: 20px;
+  margin-right: 60px;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 70vh;
+}
+
+.main #content .recipes .card {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 10px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.main #content .recipes .card img {
+  width: 100%;
+  height: 100px;
+}
+
+.main #content .recipes .card h1 {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Josefin sans";
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.main #content .recipes .card .buttons {
+  display: none;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.main #content .recipes .card .buttons .btn {
+  background-color: lightcoral;
+  color: white;
+  height: 35px;
+  width: 35px;
+  margin-left: 80%;
+  font-size: .9rem;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+}
+
+.main #content .recipes .card .buttons .btn:hover:before {
+  opacity: 1;
+}
+
+.main #content .recipes .card .buttons .more:before {
+  content: attr(aria-label);
+  opacity: 0;
+  position: absolute;
+  top: 16px;
+  left: 110px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px;
+  color: black;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2);
+          box-shadow: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  font-family: "Josefin sans";
+  border-radius: 10px;
+}
+
+.main #content .recipes .card .buttons .show::before {
+  content: attr(aria-label);
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 110px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px;
+  color: black;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2);
+          box-shadow: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  font-family: "Josefin sans";
+  border-radius: 10px;
+}
+
+.main #content .recipes .card:hover .buttons {
+  display: block;
+}
+
+.main #content #Show {
+  margin-top: 40px;
+}
+
+.main #content #Show img {
+  width: 70%;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px;
+}
+
+.main #content #Show h1 {
+  margin-top: 20px;
+  font-family: "Operator mono";
+  font-size: 1.9rem;
+  font-style: italic;
+}
+
+.main #content #Show .howtomake {
+  font-family: "Josefin sans";
+  margin-top: 20px;
+  line-height: 2;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 200px;
+}
+
+.main #content #Show .btn {
+  background-color: lightcoral;
+  color: white;
+  font-family: "Josefin sans";
+}
+
+.main #content .btn-switch {
+  position: absolute;
+  top: 80vh;
+  right: 10px;
+}
+
+.main #content .btn-switch .btn {
+  background-color: lightcoral;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+}
+
+.main #content .btn-switch #right {
+  margin-left: 10px !important;
+}
+
+.main #user .fav {
+  padding: 20px;
+  border-left: 2px solid lightcoral;
+  width: 100%;
+  height: 100%;
+}
+
+.main #user .fav h1 {
+  font-size: 1.2rem;
+  font-family: "Operator mono";
+  font-style: italic;
+}
+
+.main #user .fav .list-favs {
+  margin-top: 50px;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 70vh;
+}
+
+.main #user .fav .fav-item {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  margin: 5px;
+  padding: 5px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+}
+
+.main #user .fav .fav-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.main #user .fav .fav-item h4 {
+  font-size: .8rem;
+  font-family: "Josefin sans";
+}
+
+.main #user .fav .fav-item .btn {
+  width: 40px;
+  height: 40px;
+  background-color: lightcoral;
+  border-radius: 50%;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="shortcut icon" href="./img/logo/recipelogo.PNG" type="image/x-icon">
+
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="now recipes has added check them now"
+    />
+  
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+  $(".barsbutton").click(function(){
+    $(collapsibleNavId).toggle();
+  });
+  $(window).scroll(function() {
+    var top = $(window).scrollTop();
+    if(top >= 90){
+      $('nav').addClass('show')
+    }else if($('nav').hasClass('show')){
+      $('nav').removeClass('show');
+    }
+  })
+});
+</script>
+  </body>
+</html>

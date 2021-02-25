@@ -1,0 +1,39 @@
+@media screen and (max-width: 760px) {
+  body {
+    height: 106vh;
+    width: 93%;
+  }
+  body .main {
+    margin: 40px 18px;
+    padding: 10px;
+  }
+  body .main #content .form-group {
+    width: 81%;
+  }
+  body .main #content .btn-switch {
+    right: 26px;
+  }
+  body .main #content .slide .text {
+    margin-left: 20px;
+  }
+  body .main #content .recipes .card {
+    width: 300px;
+    height: 350px;
+  }
+  body .main #content .recipes .card img {
+    height: 180px;
+  }
+  body .main #content #Show img {
+    width: 80%;
+  }
+  body .main #content #Show .text {
+    padding: 20px;
+  }
+  .services {
+    display: none !important;
+  }
+  #user {
+    display: none;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
