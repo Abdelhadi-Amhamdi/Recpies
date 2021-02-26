@@ -9,7 +9,10 @@
             padding: 10px;
             #content{
                 .form-group {
-                    width: 81%;
+                    width: 83%;
+                    #bars{
+                        display: block !important;
+                    }
                 }
                 .btn-switch {
                     right: 26px;

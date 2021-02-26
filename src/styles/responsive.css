@@ -8,7 +8,10 @@
     padding: 10px;
   }
   body .main #content .form-group {
-    width: 81%;
+    width: 83%;
+  }
+  body .main #content .form-group #bars {
+    display: block !important;
   }
   body .main #content .btn-switch {
     right: 26px;

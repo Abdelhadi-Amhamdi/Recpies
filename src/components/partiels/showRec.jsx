@@ -10,9 +10,9 @@ const Show = ({ data }) => {
         <div className="text">
           <h1>{data.title}</h1>
           <ul className="howtomake">
-            {data.ma9adir.map(item=> {
+            {data.ma9adir.map((item , index)=> {
               return(
-                <li>{item}</li>
+                <li key={index}>{item}</li>
               )
             })}
           </ul>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , useRef } from "react";
 import Services from "./services";
 import Slider from "./slide";
 import Recipes from "./Recipe";
@@ -12,9 +12,10 @@ const Slide = () => {
   const App_id = "3bef46a7";
 
   const [addFav, setaddFav] = useState(false);
+  const favs = useRef()
 
   const [indexPage, setindexPage] = useState(0);
-  const [query, setquery] = useState("chiken");
+  const [query, setquery] = useState("egg");
   const [recipesData, setrecpies] = useState([]);
   const [searchT, setsearchT] = useState("");
   const [showItem, setshowItem] = useState({});
@@ -30,11 +31,15 @@ const Slide = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [query]);
+  }, [query , setquery]);
 
   function search() {
     setquery(searchT);
     setindexPage(1);
+  }
+
+  function showFavs(){
+    // console.log(favs.current.className)
   }
 
   return (
@@ -42,15 +47,17 @@ const Slide = () => {
       <div className="row">
         <div className="col-md-9" id="content">
           <div className="form-group">
-            
             <input
               type="text"
               className="form-control"
               onChange={(e) => setsearchT(e.target.value)}
-              placeholder="search ..."
+              placeholder="search..."
             />
             <div  className="btn" onClick={search}>
               <i className="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div  className="btn" id="bars" onClick={showFavs}>
+              <i className="fa fa-bars" aria-hidden="true"></i>
             </div>
           </div>
           {indexPage === 0 ? (
@@ -77,7 +84,7 @@ const Slide = () => {
           )}
         </div>
         <div className="col-md-3" id="user">
-          <div className="fav">
+          <div className="fav" ref={favs}>
             <h1>Your Favourite Recipes</h1>
             <Favourites added={addFav} />
           </div>

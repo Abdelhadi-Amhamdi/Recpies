@@ -4,23 +4,29 @@ const Recipe = ({ data, inPange, addFav, setAdf, setShow }) => {
 
   const [ff, setff] = useState({})
 
+
+  
+
   useEffect(() => {
     if (addFav === true) {
+      
+      const setItLoacaly = () => {
+        let Favs = [];
+        const item = window.localStorage.getItem("favs");
+        if (item === null) {
+        
+        } else {
+          Favs = JSON.parse(localStorage.getItem("favs"));
+        }
+        Favs.unshift(ff);
+        localStorage.setItem("favs", JSON.stringify(Favs));
+      }
+
+
       setItLoacaly();
       setAdf(false);
     }
-  }, [addFav, setAdf]);
-  console.log(data);
-  function setItLoacaly() {
-    let Favs = [];
-    const item = window.localStorage.getItem("favs");
-    if (item === null) {
-    } else {
-      Favs = JSON.parse(localStorage.getItem("favs"));
-    }
-    Favs.unshift(ff);
-    localStorage.setItem("favs", JSON.stringify(Favs));
-  }
+  }, [addFav, setAdf , ff]);
 
   return (
     <div className="recipes">
@@ -29,7 +35,7 @@ const Recipe = ({ data, inPange, addFav, setAdf, setShow }) => {
           return (
             <div className="col-md-3" key={index}>
               <div className="card">
-                <img src={item.recipe.image} />
+                <img src={item.recipe.image} alt="RecImg"/>
                 <h1>{item.recipe.label}</h1>
                 <div className="buttons">
                   <div

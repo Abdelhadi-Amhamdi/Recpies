@@ -1,9 +1,10 @@
 // variables
 
-$primary: lightcoral;
+$primary: #55627a;
 $secondary: khaki;
 $danger: lightblue;
 $info: white;
+$coral : lightcoral ;
 
 * {
   margin: 0;
@@ -12,15 +13,13 @@ $info: white;
 }
 
 
-// fonts
-@font-face {
-  font-family: 'Poppi';
-  src: url() 
-}
+
 
 body {
-  // background-color: $secondary;
-  background : linear-gradient($primary , $secondary) !important;
+  background-color: #bdd4e7;
+background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+
+
   height: 105vh;
   
 }
@@ -55,6 +54,9 @@ body {
         color: $info;
         margin-left: 10px;
         box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
+      }
+      #bars{
+        display: none;
       }
     }
     
@@ -119,7 +121,7 @@ body {
           enable-background: new;
         }
         .st3 {
-          fill: $primary;
+          fill: $coral;
         }
         .st4 {
           fill: #fbbebe;
@@ -131,33 +133,33 @@ body {
           fill: #575a89;
         }
         .st7{fill:#B07473;}
-        .st8{fill:$primary;}
+        .st8{fill:$coral;}
         .st9{fill:#65617D;}
         .st10{fill:#444053;}
         .st11{fill:#DDE1EB;}
         .st12{fill:#585268;}
         .st13{opacity:0.1;}
         .st14{fill:#535461;}
-        .st15{fill:$primary;}
+        .st15{fill:$coral;}
         .st16{opacity:0.1;fill:#FFFFFF;enable-background:new    ;}
         .st17{fill:#C8CBD8;}
         .st18{fill:#E8EAF1;}
         .st24{fill:url(#SVGID_2_);}
-        .st25{fill:$primary;}
+        .st25{fill:$coral;}
         .st26{fill:#714246;}
         .st27{fill:#453034;}
         .st28{fill:#E8E8F0;}
         .st29{fill:url(#SVGID_3_);}
-        .st30{fill:$primary;}
+        .st30{fill:$coral;}
         .st31{fill:#E1E7EF;}
-        .st32{fill:$primary;}
+        .st32{fill:$coral;}
         .st33{opacity:3.000000e-02;enable-background:new    ;}
         .st34{fill:#FFD037;}
         .st35{opacity:0.2;enable-background:new    ;}
         width: 150px;
         padding: 10px;
         text-align: center;
-        background-color: rgba($info, $alpha: .4);
+        background-color: rgba($info, $alpha: 1);
         box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
         transition: transform 1s;
         transform-style: preserve-3d;
@@ -183,37 +185,8 @@ body {
           font-family: "Josefin sans";
         }
       }
-      .card-back{
-        visibility: hidden;
-        
-      }
     }
-    .flip-card:hover .card-front{
-      transform: rotateY(180deg);
-      .icecream , h1{ visibility: hidden; transition:all .3s ease-in;}
-      .food , h1{ visibility: hidden; transition:all .3s ease-in;}
-      .drink , h1{ visibility: hidden; transition:all .3s ease-in;}
-      
-    }
-    .flip-card:hover .card-back{
-      visibility: visible;
-      position: absolute;
-      top: 60%;
-      left: 35%;
-      transition:all .3s ease-in;
-      transform: translateZ(-60% -35%);
-      font-weight: bolder;
-      .icon{
-        background-color: $primary;
-        color: $info;
-        padding: 5px;
-        cursor: pointer;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        border-radius: 50%;
-      }
-    }
+    
     
       
     }
@@ -226,21 +199,21 @@ body {
       .card{
         width: 100%;
         height: 200px;
-        background-color: rgba($info, $alpha: .4);
+        background-color: rgba($info, $alpha: 1);
         margin: 10px 0px;
         box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
         border-radius: 0px;
         cursor: pointer;
         img {
           width: 100%;
-          height: 100px;
+          height: 130px;
         }
         h1{
-          font-size: 1rem;
+          font-size: .9rem;
           text-align: center;
           font-family: "Josefin sans";
-          font-style: italic;
           margin-top: 20px;
+          padding: 0px 20px;
         }
         .buttons{
           display: none;
@@ -365,7 +338,7 @@ body {
       }
       .fav-item{
         cursor: pointer;
-        background-color: rgba($info, $alpha: .4);
+        background-color: rgba($info, $alpha: 1);
         border-radius: 20px;
         margin: 5px;
         padding: 5px;
@@ -382,6 +355,10 @@ body {
         h4{
           font-size: .8rem;
           font-family: "Josefin sans";
+          width: 100px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis !important;
         }
         .btn{
           width: 40px;

@@ -5,14 +5,9 @@
           box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Poppi';
-  src: url();
-}
-
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(lightcoral), to(khaki)) !important;
-  background: linear-gradient(lightcoral, khaki) !important;
+  background-color: #bdd4e7;
+  background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
   height: 105vh;
 }
 
@@ -45,7 +40,7 @@ body {
   background-color: transparent;
   border: none;
   border-radius: 0px;
-  border-bottom: 1px solid lightcoral;
+  border-bottom: 1px solid #55627a;
 }
 
 .main #content .form-group input:focus {
@@ -54,12 +49,16 @@ body {
 }
 
 .main #content .form-group .btn {
-  background-color: lightcoral;
+  background-color: #55627a;
   border-radius: 50%;
   color: white;
   margin-left: 10px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+}
+
+.main #content .form-group #bars {
+  display: none;
 }
 
 .main #content .page1 {
@@ -94,7 +93,7 @@ body {
 }
 
 .main #content .slide .text h1 span {
-  color: lightcoral;
+  color: #55627a;
 }
 
 .main #content .slide .text h2 {
@@ -131,7 +130,7 @@ body {
   width: 150px;
   padding: 10px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
   -webkit-transition: -webkit-transform 1s;
@@ -297,56 +296,6 @@ body {
   font-family: "Josefin sans";
 }
 
-.main #content .services .flip-card .card-back {
-  visibility: hidden;
-}
-
-.main #content .services .flip-card:hover .card-front {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.main #content .services .flip-card:hover .card-front .icecream, .main #content .services .flip-card:hover .card-front h1 {
-  visibility: hidden;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-}
-
-.main #content .services .flip-card:hover .card-front .food, .main #content .services .flip-card:hover .card-front h1 {
-  visibility: hidden;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-}
-
-.main #content .services .flip-card:hover .card-front .drink, .main #content .services .flip-card:hover .card-front h1 {
-  visibility: hidden;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-}
-
-.main #content .services .flip-card:hover .card-back {
-  visibility: visible;
-  position: absolute;
-  top: 60%;
-  left: 35%;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-  -webkit-transform: translateZ(-60% -35%);
-          transform: translateZ(-60% -35%);
-  font-weight: bolder;
-}
-
-.main #content .services .flip-card:hover .card-back .icon {
-  background-color: lightcoral;
-  color: white;
-  padding: 5px;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  border-radius: 50%;
-}
-
 .main #content .recipes {
   padding: 20px;
   margin-right: 60px;
@@ -358,7 +307,7 @@ body {
 .main #content .recipes .card {
   width: 100%;
   height: 200px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: white;
   margin: 10px 0px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
@@ -368,15 +317,15 @@ body {
 
 .main #content .recipes .card img {
   width: 100%;
-  height: 100px;
+  height: 130px;
 }
 
 .main #content .recipes .card h1 {
-  font-size: 1rem;
+  font-size: .9rem;
   text-align: center;
   font-family: "Josefin sans";
-  font-style: italic;
   margin-top: 20px;
+  padding: 0px 20px;
 }
 
 .main #content .recipes .card .buttons {
@@ -390,7 +339,7 @@ body {
 }
 
 .main #content .recipes .card .buttons .btn {
-  background-color: lightcoral;
+  background-color: #55627a;
   color: white;
   height: 35px;
   width: 35px;
@@ -482,7 +431,7 @@ body {
 }
 
 .main #content #Show .btn {
-  background-color: lightcoral;
+  background-color: #55627a;
   color: white;
   font-family: "Josefin sans";
 }
@@ -494,7 +443,7 @@ body {
 }
 
 .main #content .btn-switch .btn {
-  background-color: lightcoral;
+  background-color: #55627a;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -509,7 +458,7 @@ body {
 
 .main #user .fav {
   padding: 20px;
-  border-left: 2px solid lightcoral;
+  border-left: 2px solid #55627a;
   width: 100%;
   height: 100%;
 }
@@ -529,7 +478,7 @@ body {
 
 .main #user .fav .fav-item {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: white;
   border-radius: 20px;
   margin: 5px;
   padding: 5px;
@@ -556,12 +505,16 @@ body {
 .main #user .fav .fav-item h4 {
   font-size: .8rem;
   font-family: "Josefin sans";
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis !important;
 }
 
 .main #user .fav .fav-item .btn {
   width: 40px;
   height: 40px;
-  background-color: lightcoral;
+  background-color: #55627a;
   border-radius: 50%;
   color: white;
 }
