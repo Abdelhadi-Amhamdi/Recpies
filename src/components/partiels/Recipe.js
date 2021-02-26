@@ -6,21 +6,23 @@ const Recipe = ({ data, inPange, addFav, setAdf, setShow }) => {
 
   useEffect(() => {
     if (addFav === true) {
+      
+      function setItLoacaly() {
+        let Favs = [];
+        const item = window.localStorage.getItem("favs");
+        if (item === null) {
+        } else {
+          Favs = JSON.parse(localStorage.getItem("favs"));
+        }
+        Favs.unshift(ff);
+        localStorage.setItem("favs", JSON.stringify(Favs));
+      }
+      
       setItLoacaly();
       setAdf(false);
     }
-  }, [addFav, setAdf]);
-  console.log(data);
-  function setItLoacaly() {
-    let Favs = [];
-    const item = window.localStorage.getItem("favs");
-    if (item === null) {
-    } else {
-      Favs = JSON.parse(localStorage.getItem("favs"));
-    }
-    Favs.unshift(ff);
-    localStorage.setItem("favs", JSON.stringify(Favs));
-  }
+  }, [addFav, setAdf , ff]);
+  
 
   return (
     <div className="recipes">
