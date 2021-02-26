@@ -29,7 +29,7 @@ const Recipe = ({ data, inPange, addFav, setAdf, setShow }) => {
           return (
             <div className="col-md-3" key={index}>
               <div className="card">
-                <img src={item.recipe.image} alt="recipe image" />
+                <img src={item.recipe.image} alt="recipe-top" />
                 <h1>{item.recipe.label}</h1>
                 <div className="buttons">
                   <div
