@@ -15,7 +15,7 @@ const Slide = () => {
   const favs = useRef()
 
   const [indexPage, setindexPage] = useState(0);
-  const [query, setquery] = useState("egg");
+  const [query, setquery] = useState("banana");
   const [recipesData, setrecpies] = useState([]);
   const [searchT, setsearchT] = useState("");
   const [showItem, setshowItem] = useState({});

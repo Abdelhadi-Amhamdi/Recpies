@@ -19,7 +19,14 @@ const Show = ({ data }) => {
           <div
             className="btn"
             onClick={() => {
-              alert("add it to storage");
+                let Favs = [];
+                const item = window.localStorage.getItem("favs");
+                if (item){
+                  Favs = JSON.parse(localStorage.getItem("favs"));
+                }
+                Favs.unshift(data);
+                localStorage.setItem("favs", JSON.stringify(Favs));
+              
             }}
           >
             Add it to favourits

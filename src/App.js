@@ -8,6 +8,8 @@ const App = () => {
     <div className="App">
       <div className="row">
         <div className="col-md-12">
+          <div className="circle1"></div>
+          <div className="circle2"></div>
           <Index />
         </div>
       </div>

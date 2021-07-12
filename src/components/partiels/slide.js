@@ -7,7 +7,7 @@ const Slider = () => {
       <div className="slide">
         <div className="row">
           <div className="col-md-6 img">
-            <img src="./img/slide1.jpg" alt="" />
+            <img src="./img/slider-img.svg" alt="" />
           </div>
           <div className="col-md-6 text">
             <h1>

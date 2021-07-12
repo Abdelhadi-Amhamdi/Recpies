@@ -17,8 +17,18 @@
                 .btn-switch {
                     right: 26px;
                 }
-                .slide .text {
-                    margin-left: 20px;
+                .slide {
+                    .text {
+                        margin-left: 20px;
+                    }
+                    .img {
+                        img {
+                            width: 300px;
+                            margin-top: 10px;
+                            margin-left: 10px;
+                        }
+                    }
+
                 }
                 .recipes{
                     .card {

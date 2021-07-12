@@ -1,10 +1,10 @@
 // variables
 
-$primary: #55627a;
+$primary: #ffc872;
 $secondary: khaki;
 $danger: lightblue;
 $info: white;
-$coral : lightcoral ;
+$coral : #ffc872 ;
 
 * {
   margin: 0;
@@ -16,20 +16,42 @@ $coral : lightcoral ;
 
 
 body {
-  background-color: #bdd4e7;
-background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
-
-
-  height: 105vh;
+  background-color: #ffe3b3;
+  // background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+  height: 90vh;
+  overflow-y: hidden;
   
 }
 
+.circle1 , .circle2  {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  width: 400px;
+  height: 400px;
+  background-color: #006bbb;
+  top: -100px;
+  left: -100px;
+}
+.circle2 {
+  width: 400px;
+  height: 400px;
+  background-color: #30a0e0;
+  bottom: -100px;
+  right: -100px;
+}
+
 .main {
-  width: 95%;
-  height: 90vh;
-  margin: 30px;
+  width: 98%;
+  height: 95vh;
+  margin: 10px;
   background-color: rgba($info, $alpha: .5);
   box-shadow: rgba($color: #000000, $alpha: .2) 0px 2px 6px;
+  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(80px);
+  border-radius: 8px;
   #content {
     height: 90vh;
     padding: 40;
@@ -72,7 +94,6 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
           margin-left: 20px;
           width: 300px;
           height: 200px;
-          box-shadow: rgba($color: #000000, $alpha: .5) 0px 4px 6px;
         }
       }
       .text {
@@ -110,6 +131,7 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
       perspective: 1000px;
       height: 100px !important;
       .card-front {
+        border-radius: 8px;
         .st0 {
           fill: $secondary;
         }
@@ -160,7 +182,7 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
         padding: 10px;
         text-align: center;
         background-color: rgba($info, $alpha: 1);
-        box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
+        box-shadow: rgba($color: #000000, $alpha: .2) 2px 4px 2px;
         transition: transform 1s;
         transform-style: preserve-3d;
         cursor: pointer;
@@ -191,37 +213,45 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
       
     }
     .recipes{
-      padding: 20px;
+      padding: 10px 20px;
       margin-right: 60px;
       scroll-behavior: smooth;
       overflow-y: scroll;
       height: 70vh;
       .card{
         width: 100%;
-        height: 200px;
+        height: 150px;
         background-color: rgba($info, $alpha: 1);
         margin: 10px 0px;
         box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
         border-radius: 0px;
         cursor: pointer;
+        border-radius: 8px;
         img {
-          width: 100%;
-          height: 130px;
+          border-radius: 8px;
+          height: 100%;
         }
-        h1{
-          font-size: .9rem;
-          text-align: center;
-          font-family: "Josefin sans";
-          margin-top: 20px;
-          padding: 0px 20px;
-        }
+        
         .buttons{
+          background-color: rgba($color: #000000, $alpha: .2);
+          width: 100%;
+          height: 100%;
           display: none;
           padding: 10px;
           position: absolute;
           top: 50%;
-          right: 15px;
           transform: translateY(-50%);
+          border-radius: 8px;
+          -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+          h1{
+            font-size: .9rem;
+            text-align: center;
+            font-family: "Josefin sans";
+            margin-top: 20px;
+            padding: 0px 20px;
+            color: white;
+          }
           .btn{
             background-color: $primary;
             color:$info;
@@ -232,6 +262,9 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
             margin-bottom: 10px;
             border-radius: 50%;
             box-shadow: rgba($color: #000000, $alpha: .2) 0px 4px 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
           .btn:hover:before{
             opacity: 1;
@@ -339,7 +372,7 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
       .fav-item{
         cursor: pointer;
         background-color: rgba($info, $alpha: 1);
-        border-radius: 20px;
+        border-radius: 8px;
         margin: 5px;
         padding: 5px;
         margin-top: 20px;
@@ -376,4 +409,10 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
 
 ::-webkit-scrollbar{
   display: none;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: black;
 }

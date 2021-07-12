@@ -5,17 +5,13 @@ const Recipe = ({ data, inPange, addFav, setAdf, setShow }) => {
   const [ff, setff] = useState({})
 
 
-  
-
   useEffect(() => {
     if (addFav === true) {
       
       const setItLoacaly = () => {
         let Favs = [];
         const item = window.localStorage.getItem("favs");
-        if (item === null) {
-        
-        } else {
+        if (item){
           Favs = JSON.parse(localStorage.getItem("favs"));
         }
         Favs.unshift(ff);
@@ -36,17 +32,16 @@ const Recipe = ({ data, inPange, addFav, setAdf, setShow }) => {
             <div className="col-md-3" key={index}>
               <div className="card">
                 <img src={item.recipe.image} alt="RecImg"/>
-                <h1>{item.recipe.label}</h1>
                 <div className="buttons">
+                  <h1>{item.recipe.label}</h1>
                   <div
                     className="btn"
                     onClick={() => {
                       setAdf(true);
                       setff(item.recipe)
                     }}
-                    aria-label="Add this recipe to your favourites list"
                   >
-                    <i className="fa fa-plus"></i>
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
                   </div>
                   <div
                     className="btn show"
@@ -59,9 +54,8 @@ const Recipe = ({ data, inPange, addFav, setAdf, setShow }) => {
                         ma9adir : item.recipe.ingredientLines
                       });
                     }}
-                    aria-label="Show more about this recipe"
                   >
-                    <i className="fa fa-eye" aria-hidden="true"></i>
+                    <i class="fa fa-book" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>

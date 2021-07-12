@@ -6,18 +6,42 @@
 }
 
 body {
-  background-color: #bdd4e7;
-  background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
-  height: 105vh;
+  background-color: #ffe3b3;
+  height: 90vh;
+  overflow-y: hidden;
+}
+
+.circle1, .circle2 {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  width: 400px;
+  height: 400px;
+  background-color: #006bbb;
+  top: -100px;
+  left: -100px;
+}
+
+.circle2 {
+  width: 400px;
+  height: 400px;
+  background-color: #30a0e0;
+  bottom: -100px;
+  right: -100px;
 }
 
 .main {
-  width: 95%;
-  height: 90vh;
-  margin: 30px;
+  width: 98%;
+  height: 95vh;
+  margin: 10px;
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px;
+  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(80px);
+  border-radius: 8px;
 }
 
 .main #content {
@@ -40,7 +64,7 @@ body {
   background-color: transparent;
   border: none;
   border-radius: 0px;
-  border-bottom: 1px solid #55627a;
+  border-bottom: 1px solid #ffc872;
 }
 
 .main #content .form-group input:focus {
@@ -49,7 +73,7 @@ body {
 }
 
 .main #content .form-group .btn {
-  background-color: #55627a;
+  background-color: #ffc872;
   border-radius: 50%;
   color: white;
   margin-left: 10px;
@@ -76,8 +100,6 @@ body {
   margin-left: 20px;
   width: 300px;
   height: 200px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px;
-          box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px;
 }
 
 .main #content .slide .text {
@@ -93,7 +115,7 @@ body {
 }
 
 .main #content .slide .text h1 span {
-  color: #55627a;
+  color: #ffc872;
 }
 
 .main #content .slide .text h2 {
@@ -127,12 +149,13 @@ body {
 }
 
 .main #content .services .flip-card .card-front {
+  border-radius: 8px;
   width: 150px;
   padding: 10px;
   text-align: center;
   background-color: white;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
-          box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 2px 4px 2px;
+          box-shadow: rgba(0, 0, 0, 0.2) 2px 4px 2px;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -158,7 +181,7 @@ body {
 }
 
 .main #content .services .flip-card .card-front .st3 {
-  fill: lightcoral;
+  fill: #ffc872;
 }
 
 .main #content .services .flip-card .card-front .st4 {
@@ -178,7 +201,7 @@ body {
 }
 
 .main #content .services .flip-card .card-front .st8 {
-  fill: lightcoral;
+  fill: #ffc872;
 }
 
 .main #content .services .flip-card .card-front .st9 {
@@ -206,7 +229,7 @@ body {
 }
 
 .main #content .services .flip-card .card-front .st15 {
-  fill: lightcoral;
+  fill: #ffc872;
 }
 
 .main #content .services .flip-card .card-front .st16 {
@@ -228,7 +251,7 @@ body {
 }
 
 .main #content .services .flip-card .card-front .st25 {
-  fill: lightcoral;
+  fill: #ffc872;
 }
 
 .main #content .services .flip-card .card-front .st26 {
@@ -248,7 +271,7 @@ body {
 }
 
 .main #content .services .flip-card .card-front .st30 {
-  fill: lightcoral;
+  fill: #ffc872;
 }
 
 .main #content .services .flip-card .card-front .st31 {
@@ -256,7 +279,7 @@ body {
 }
 
 .main #content .services .flip-card .card-front .st32 {
-  fill: lightcoral;
+  fill: #ffc872;
 }
 
 .main #content .services .flip-card .card-front .st33 {
@@ -297,7 +320,7 @@ body {
 }
 
 .main #content .recipes {
-  padding: 20px;
+  padding: 10px 20px;
   margin-right: 60px;
   scroll-behavior: smooth;
   overflow-y: scroll;
@@ -306,40 +329,47 @@ body {
 
 .main #content .recipes .card {
   width: 100%;
-  height: 200px;
+  height: 150px;
   background-color: white;
   margin: 10px 0px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
   border-radius: 0px;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .main #content .recipes .card img {
-  width: 100%;
-  height: 130px;
+  border-radius: 8px;
+  height: 100%;
 }
 
-.main #content .recipes .card h1 {
+.main #content .recipes .card .buttons {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.main #content .recipes .card .buttons h1 {
   font-size: .9rem;
   text-align: center;
   font-family: "Josefin sans";
   margin-top: 20px;
   padding: 0px 20px;
-}
-
-.main #content .recipes .card .buttons {
-  display: none;
-  padding: 10px;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  color: white;
 }
 
 .main #content .recipes .card .buttons .btn {
-  background-color: #55627a;
+  background-color: #ffc872;
   color: white;
   height: 35px;
   width: 35px;
@@ -349,6 +379,15 @@ body {
   border-radius: 50%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main #content .recipes .card .buttons .btn:hover:before {
@@ -431,7 +470,7 @@ body {
 }
 
 .main #content #Show .btn {
-  background-color: #55627a;
+  background-color: #ffc872;
   color: white;
   font-family: "Josefin sans";
 }
@@ -443,7 +482,7 @@ body {
 }
 
 .main #content .btn-switch .btn {
-  background-color: #55627a;
+  background-color: #ffc872;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -458,7 +497,7 @@ body {
 
 .main #user .fav {
   padding: 20px;
-  border-left: 2px solid #55627a;
+  border-left: 2px solid #ffc872;
   width: 100%;
   height: 100%;
 }
@@ -479,7 +518,7 @@ body {
 .main #user .fav .fav-item {
   cursor: pointer;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 8px;
   margin: 5px;
   padding: 5px;
   margin-top: 20px;
@@ -514,12 +553,19 @@ body {
 .main #user .fav .fav-item .btn {
   width: 40px;
   height: 40px;
-  background-color: #55627a;
+  background-color: #ffc872;
   border-radius: 50%;
   color: white;
 }
 
 ::-webkit-scrollbar {
   display: none;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
